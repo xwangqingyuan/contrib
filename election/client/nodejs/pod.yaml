@@ -5,7 +5,7 @@ metadata:
   name: elector-sidecar
 spec:
   containers:
-  - image: gcr.io/google_containers/nodejs-election-client:0.1
+  - image: xwangqingyuan/elector-client-nodejs
     imagePullPolicy: IfNotPresent
     name: nodejs
     ports:
@@ -14,7 +14,7 @@ spec:
     resources:
       requests:
         cpu: 100m
-  - image: gcr.io/google_containers/leader-elector:0.5
+  - image: xwangqingyuan/leader-elector:0.4
     imagePullPolicy: IfNotPresent
     name: elector
     args:
